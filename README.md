@@ -1,2 +1,2 @@
 # WarzoneMods
-Repository for custom [Warzone](warzone.com) mods
+Repository for custom [Warzone](https://www.warzone.com/) mods
