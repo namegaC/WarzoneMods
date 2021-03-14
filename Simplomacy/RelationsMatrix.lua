@@ -1,4 +1,6 @@
-function RelationsMatrix(game, startRelations)
+--A relations matrix holds the statusses between all players (allied, peace, war).
+
+function RelationsMatrix(game, startRelation)
     local RelationsMatrix = {};
     for _, player1 in pairs(game.ServerGame.Game.PlayingPlayers)do
         local relation = {};
@@ -6,7 +8,7 @@ function RelationsMatrix(game, startRelations)
         for _, relation in pairs(RelationsMatrix)do
             for _, player2 in pairs(game.ServerGame.Game.PlayingPlayers)do
                  if (player1.ID ~= player2.ID)then
-                    relation[player2.ID] = startRelations;
+                    relation[player2.ID] = startRelation;
                  end
             end
         end
