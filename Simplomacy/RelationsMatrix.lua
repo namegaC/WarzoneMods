@@ -1,4 +1,4 @@
---A relations matrix holds the statusses between all players (allied, peace, war).
+--A relations matrix holds the relations between all players (allied, peace, war).
 
 function RelationsMatrix(game, startRelation)
     local RelationsMatrix = {};
@@ -12,10 +12,6 @@ function RelationsMatrix(game, startRelation)
                  end
             end
         end
-    end
-    for _, entry in pairs(RelationsMatrix)do
-        -- 1201687 is myself
-        -- print(entry[1201687]);
     end
     return RelationsMatrix;
 end

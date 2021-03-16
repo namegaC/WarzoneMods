@@ -1,14 +1,13 @@
 require('RelationsMatrix')
+require('DiplomacyOrder')
 
 
 function Server_AdvanceTurn_Start (game,addNewOrder)
 	playerGameData = Mod.PlayerGameData;
 	publicGameData = Mod.PublicGameData;
 
-    for _, entry in pairs(publicGameData.RelationsMatrix)do
-        -- 1201687 is myself
-        -- print(entry[1201687]);
-    end
+    --To test Diplomacy card beginning of turn: (verified: works)
+    DiplomacyOrder(WL, addNewOrder, 1201687, 2)
 end
 
 function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrder)
