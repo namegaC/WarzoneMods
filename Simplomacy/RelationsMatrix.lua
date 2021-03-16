@@ -20,3 +20,12 @@ function RelationsMatrix(game, startRelation)
     return RelationsMatrix;
 end
 
+function ChangedRelations(playerSelfID, playerOtherID, relations, newRelation)
+    print("Changing relations...");
+    relations[playerSelfID][playerOtherID] = newRelation;
+    relations[playerOtherID][playerOtherID] = newRelation;
+    print("Relations between ".. tostring(playerSelfID) .. " and " ..  tostring(playerOtherID) .. " changed to " .. newRelation);
+    return relations;
+end
+
+
