@@ -44,12 +44,12 @@ function Server_AdvanceTurn_Order(game, order, result, skipThisOrder, addNewOrde
         ProposeChange(currentRelationMatrix, order.PlayerID, order.TargetPlayerID, "Allied");
     end
 
-    --For testing purposes, relations can be changed to "War" by playing a Gift card.
+    --For testing purposes, relations can be changed to "Peace" by playing a Gift card.
     if(order.proxyType == 'GameOrderPlayCardGift') then
         ProposeChange(currentRelationMatrix, order.PlayerID, order.GiftTo, "Peace");
     end
 
-    --For testing purposes, relations can be changed to "Peace" by playing a Sanctions card.
+    --For testing purposes, relations can be changed to "War" by playing a Sanctions card.
     if(order.proxyType == 'GameOrderPlayCardSanctions') then
         ProposeChange(currentRelationMatrix, order.PlayerID, order.SanctionedPlayerID, "War");
     end
